@@ -56,6 +56,7 @@ Hello Markdown *Spice* - this is message for {{name|"Cube"}}; __with placeholder
 
 ```html
 <p>Hello Markdown <i>Spice</i> - this is message for <span spice-var="name"></span></p>
+
 <p>Hello Markdown <i>Spice</i> - this is message for <span spice-var="name">Cube</span>; <small>with placeholder</small></p>
 <script>
 var SPICE_GLOBAL = {};
