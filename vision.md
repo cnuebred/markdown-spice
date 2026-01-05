@@ -63,3 +63,57 @@ var SPICE_GLOBAL = {};
 SPICE_GLOBAL.vars = {...SPICE_GLOBAL.vars, ...{name: null}}
 </script>
 ```
+
+---
+
+Blocks
+```md
+:block-name::
+# Hello MDSpice
+:::
+
+---
+```
+
+```html
+<div spice-block-name="block-name">
+  <h1>Hello MDSpice</h1>
+</div>
+<hr>
+```
+
+Blocks-class
+```md
+:block-name:.red-sqrt.radius-10:
+# Hello MDSpice
+:::
+
+---
+```
+
+```html
+<div spice-block-name="block-name" class="red-sqrt radius-10">
+  <h1>Hello MDSpice</h1>
+</div>
+<hr>
+```
+
+Templates [Block section] - TODO
+```md
+:block-name::?
+# Hello MDSpice - {name}
+---
+"Nano & Kat" ~ {{author}}
+:::
+
+---
+```
+
+```html
+<template >
+<div spice-block-name="block-name" class="red-sqrt radius-10">
+  <h1>Hello MDSpice</h1>
+</div>
+</template>
+<hr>
+```
