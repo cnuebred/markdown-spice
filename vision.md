@@ -98,10 +98,10 @@ Blocks-class
 <hr>
 ```
 
-Templates [Block section] - TODO
+Templates [Block section]
 ```md
 :block-name::?
-# Hello MDSpice - {name}
+# Hello MDSpice - {{name}}
 ---
 "Nano & Kat" ~ {{author}}
 :::
@@ -110,10 +110,56 @@ Templates [Block section] - TODO
 ```
 
 ```html
-<template >
+<template>
 <div spice-block-name="block-name" class="red-sqrt radius-10">
-  <h1>Hello MDSpice</h1>
+  <h1>Hello MDSpice - <span spice-var="name"></span></h1>
+  <hr>
+  <p>"Nano & Kat" ~ <span spice-var="author"></span></p>
 </div>
 </template>
 <hr>
 ```
+
+Templates logic [Block section]
+```
+Block as template -> 
+-> json structure with template tag -> 
+-> list all variables and set in json ->
+-> create function to clone template and set with specific variables ->
+```
+
+Usage sample:
+```
+:banner::?
+### {{title}}
+
+---
+
+{{description}}
+
+"{{quote}}" ~ {{quote_author}}
+:::
+
+
+:banner(
+title: Banner #1
+description: Bla bla bla...
+quote: Bla bla more
+quote_author: meh...
+)
+
+:banner(
+title: Banner #2
+description: Bla bla bla sth more...
+quote: Bla bla more pitu pitu
+quote_author: qubo
+)
+```
+
+
+
+
+
+
+
+
